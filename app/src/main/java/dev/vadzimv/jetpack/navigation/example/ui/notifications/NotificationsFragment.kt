@@ -30,8 +30,8 @@ class NotificationsFragment : Fragment() {
             viewLifecycleOwner,
             R.id.navigation_notifications,
             R.id.pickNotificationIntervalFragment
-        ) {
-            binding.textNotifications.text = it.toString()
+        ) { result ->
+            binding.textNotifications.text = result.toString()
         }
 
         return binding.root

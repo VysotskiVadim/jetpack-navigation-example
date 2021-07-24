@@ -10,12 +10,12 @@ import androidx.navigation.NavController
 fun <T : Parcelable> NavController.handleResult(
     lifecycleOwner: LifecycleOwner,
     @IdRes currentDestinationId: Int,
-    @IdRes vararg resultSources: Int,
+    @IdRes vararg handleResultFrom: Int,
     handler: (T) -> Unit
 ) {
     // `getCurrentBackStackEntry` doesn't work in case of recovery from the process death when dialog is opened.
     val currentEntry = getBackStackEntry(currentDestinationId)
-    val expectedResultKeys = resultSources.map { resultName(it) }
+    val expectedResultKeys = handleResultFrom.map { resultName(it) }
     val observer = LifecycleEventObserver { _, event ->
         if (event == Lifecycle.Event.ON_RESUME) {
             for (expectedResultKey in expectedResultKeys) {
