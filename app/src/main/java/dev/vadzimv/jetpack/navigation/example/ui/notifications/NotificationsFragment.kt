@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import dev.vadzimv.jetpack.navigation.example.R
 import dev.vadzimv.jetpack.navigation.example.databinding.FragmentNotificationsBinding
 import dev.vadzimv.jetpack.navigation.example.navigation.handleResult
+import dev.vadzimv.jetpack.navigation.example.navigation.navigateSafe
 import dev.vadzimv.jetpack.navigation.example.ui.pick.PickIntervalResult
 
 class NotificationsFragment : Fragment() {
@@ -22,7 +23,7 @@ class NotificationsFragment : Fragment() {
         val binding = FragmentNotificationsBinding.inflate(inflater, container, false).apply {
             textNotifications.text = PickIntervalResult.DAILY.toString()
             changeButton.setOnClickListener {
-                findNavController().navigate(R.id.action_navigation_notifications_to_pickNotificationIntervalFragment)
+                findNavController().navigateSafe(R.id.action_navigation_notifications_to_pickNotificationIntervalFragment)
             }
         }
 
