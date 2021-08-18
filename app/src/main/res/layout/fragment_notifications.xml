@@ -20,12 +20,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/changeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/changeButton"
         android:text="Change"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_notifications" />
+
+    <ImageButton
+        android:src="@drawable/ic_help_black_24dp"
+        android:id="@+id/notificationInfo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toEndOf="@id/changeButton"
+        app:layout_constraintTop_toTopOf="@id/changeButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

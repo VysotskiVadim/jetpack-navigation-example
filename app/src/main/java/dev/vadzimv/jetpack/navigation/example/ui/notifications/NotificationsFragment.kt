@@ -25,6 +25,9 @@ class NotificationsFragment : Fragment() {
             changeButton.setOnClickListener {
                 findNavController().navigateSafe(R.id.action_navigation_notifications_to_pickNotificationIntervalFragment)
             }
+            notificationInfo.setOnClickListener {
+                findNavController().navigateSafe(R.id.action_navigation_notifications_to_notificationInfo)
+            }
         }
 
         findNavController().handleResult<PickIntervalResult>(

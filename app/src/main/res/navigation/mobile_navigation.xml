@@ -25,10 +25,18 @@
         <action
             android:id="@+id/action_navigation_notifications_to_pickNotificationIntervalFragment"
             app:destination="@id/pickNotificationIntervalFragment" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_notificationInfo"
+            app:destination="@id/notificationInfo" />
     </customFragment>
     <customFragment
         android:id="@+id/pickNotificationIntervalFragment"
         android:name="dev.vadzimv.jetpack.navigation.example.ui.pick.PickNotificationIntervalFragment"
         android:label="PickNotificationIntervalFragment"
+        app:outer="true" />
+    <customFragment
+        android:id="@+id/notificationInfo"
+        android:name="dev.vadzimv.jetpack.navigation.example.ui.notifications.NotificationInfoFragment"
+        app:add="true"
         app:outer="true" />
 </navigation>
